@@ -1,1 +1,62 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  color: #cc6699;
+  margin-bottom: 30px;
+}
+
+.malla-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.ramo {
+  background-color: #fcd6e6;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+.ramo:hover {
+  background-color: #f9c3d7;
+  transform: translateY(-2px);
+}
+
+.ramo.aprobado {
+  background-color: #b8b8b8;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.ramo::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: -1.5em;
+  transform: translateX(-50%);
+  background-color: #ffe3ef;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: pre-line;
+  display: none;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.ramo:hover::after {
+  display: block;
+}
 
