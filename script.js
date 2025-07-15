@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+  crearMalla();
+});
 const ramos = [
   // Semestres 1 al 11 (todos los ramos con prerrequisitos definidos)
   { nombre: "Química general I", semestre: 1 },
